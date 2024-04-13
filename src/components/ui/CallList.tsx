@@ -7,8 +7,7 @@ import Loader from './Loader';
 import { useToast } from './use-toast';
 
 const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
-    const { endedCalls, upcomingCalls, callRecordings, isloading } =
-    useGetCalls();
+    const { endedCalls, upcomingCalls, callRecordings, isLoading } = useGetCalls();
     const router = useRouter()
     const { toast } = useToast()
   const [recordings, setRecordings] = useState<CallRecording[]>([]);
@@ -36,7 +35,7 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
     }
   }, [type, callRecordings]);
 
-  if (isloading) return <Loader />;
+  if (isLoading) return <Loader />;
 
   const getCalls = () => {
     switch (type) {
