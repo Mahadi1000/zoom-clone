@@ -7,7 +7,7 @@ import {
   useCallStateHooks,
 } from '@stream-io/video-react-sdk';
 import { Button } from './button';
-import Alert from './alert';
+import Alert from './Alert';
 
 
 
